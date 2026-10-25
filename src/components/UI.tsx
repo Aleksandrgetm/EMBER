@@ -8,6 +8,8 @@ import gsap from 'gsap';
 
 export function Flame({className=''}:{className?:string}) { return <svg className={className} viewBox="0 0 32 42" fill="none" aria-hidden="true"><path d="M18 2c3 12-13 15-13 26 0 7 5 12 11 12s12-5 12-13C28 18 19 14 18 2Z" stroke="currentColor" strokeWidth="1.3"/><path d="M16 20c2 7-5 10-5 15 0 3 2 5 5 5s6-3 6-6c0-5-6-8-6-14Z" stroke="currentColor" strokeWidth="1.1"/></svg> }
 export function Eyebrow({children,className=''}:{children:ReactNode;className?:string}) {return <p className={`eyebrow ${className}`}>{children}</p>}
+// Match the former desktop text arrow's contour, advance, and baseline without font fallback.
+export function InlineArrow(){return <svg className="inline-arrow" viewBox="0 -880 1000 1000" fill="currentColor" aria-hidden="true" focusable="false"><path transform="scale(1 -1)" stroke="currentColor" strokeWidth="25" strokeLinejoin="round" d="M75-78 861 711 871 500H900C902 622 909 690 930 810 810 789 742 782 620 780V751L831 741 46-49Z"/></svg>}
 export function TextLink({to,children,className=''}:{to:string;children:ReactNode;className?:string}) {return <Link to={to} className={`text-link ${className}`}><span>{children}</span><ArrowUpRight size={17} strokeWidth={1.3}/></Link>}
 export function Magnetic({children,className=''}:{children:ReactNode;className?:string}) {
   const ref=useRef<HTMLSpanElement>(null);const reduced=useReducedEffects();

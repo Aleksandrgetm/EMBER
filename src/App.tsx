@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { Header, Footer, Preloader } from './components/Layout';
+import { InlineArrow } from './components/UI';
 import { useSmoothScroll } from './hooks/useMotion';
 import Home from './pages/Home';
 const Menu=lazy(()=>import('./pages/Menu'));
@@ -25,7 +26,7 @@ export default function App(){
         <motion.div className="page-curtain" aria-hidden="true" initial={{scaleY:reduced?0:1}} animate={{scaleY:0}} transition={{duration:.7,ease:[.76,0,.24,1]}}/>
         <main id="main" tabIndex={-1}><Suspense fallback={<div className="route-loading"><span className="brand">EMBER</span><p>Setting the table…</p></div>}><Routes location={location}>
           <Route path="/" element={<Home/>}/><Route path="/menu" element={<Menu/>}/><Route path="/dish/:id" element={<DishDetail/>}/><Route path="/experience" element={<Experience/>}/><Route path="/about" element={<About/>}/><Route path="/reservations" element={<Reservations/>}/>
-          <Route path="*" element={<section className="not-found"><p className="eyebrow">404 · A LITTLE OFF THE BEATEN PATH</p><h1>This table<br/><em>isn't set.</em></h1><Link to="/" className="text-link">Find your way home ↗</Link></section>}/>
+          <Route path="*" element={<section className="not-found"><p className="eyebrow">404 · A LITTLE OFF THE BEATEN PATH</p><h1>This table<br/><em>isn't set.</em></h1><Link to="/" className="text-link"><span>Find your way home <InlineArrow/></span></Link></section>}/>
         </Routes></Suspense></main><Footer/>
       </motion.div>
     </AnimatePresence>

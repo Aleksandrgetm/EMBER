@@ -27,3 +27,12 @@
 The browser tests use the available desktop embedded browser and emulated viewport sizes, not a physical device lab. No Lighthouse, cross-browser certification, field Core Web Vitals, or award eligibility is asserted. The lazy WebGL vendor chunk is approximately 309 KB gzip and triggers Vite's generic 500 KB uncompressed warning. It is separate from the main bundle and omitted when Home starts in reduced-motion mode. WebGL render errors leave accessible photography/static fallback available.
 
 The project is a demonstration. Availability is illustrative; there is no reservation backend, payment flow, transactional email, analytics or third-party tracking. The user-facing result must not be described as a real confirmed reservation.
+
+## Arrow rendering audit — 26 October 2026
+
+- Audited all source and public text assets for literal arrows, HTML numeric/named entities, and JavaScript/CSS Unicode escapes. The 25 existing arrow component sites already use SVG; their paths, dimensions, stroke widths, animations, and event handlers are unchanged.
+- Replaced the sole text arrow (the 404 return-home link) with a custom SVG matching its desktop outline and optical weight. The inline advance and baseline are explicit; `currentColor` preserves the link's color transition. The decorative SVG is hidden from assistive technology.
+- Kept the link as one flex item to avoid introducing the shared 32 px icon gap. Its measured rectangle remains 119.96875 × 44 CSS pixels: desktop x=100.796875, y=496.40625; mobile x=24, y=351. The original text arrow stayed still on hover, so the SVG explicitly retains that behavior.
+- Inspected all ten route cases at 1440 × 900 and 390 × 844, including three dish pages, unknown dish, and 404. No Unicode arrows remain in their rendered text. Also checked expanded navigation, filtered/tasting menu, gallery and lightbox arrows, reservation details/edit/back actions, and demo confirmation.
+- Checked the replacement's hover (no translation), inherited color, and keyboard activation back to Home. Existing hover/active/media-query and motion rules remain unchanged; the new selector is scoped to the inline replacement.
+- Physical iOS Safari and Android Chrome were not available. Viewport checks do not emulate their font engines; SVG removes emoji/font selection from all authored arrows. Native select/date-control indicators remain browser-owned and were not restyled.
