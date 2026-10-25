@@ -1,0 +1,30 @@
+EMBER original image assets
+
+Created 25 October 2026 with OpenAI built-in image_gen (not CLI).
+All five images are AI-generated fictional restaurant imagery. They are not documentary photographs of a real restaurant, chef, dish or interior. No external photographs or stock imagery were used as inputs.
+JPEG copies are optimized at quality 84 with macOS sips. Composition and visual content were not altered after generation. All outputs were visually inspected. Original generated PNGs remain in the Codex generated_images directory.
+
+Files:
+- hero.jpg: chef hand plating beside open hearth; dark left-side editorial negative space.
+- dish.jpg: charred celeriac, truffle and herb oil on black ceramic.
+- room.jpg: walnut, dark stone and curved banquette in candlelit restaurant.
+- fish.jpg: white fish, charred leek and mussel beurre blanc on ivory ceramic.
+- pear.jpg: amber pear, cultured cream, buckwheat and caramel shard on black ceramic.
+
+Final prompts:
+
+hero.jpg
+Use case: photorealistic-natural. Asset type: very wide landscape hero photography for the original fictional fine dining restaurant EMBER. Primary request: a cinematic professional chef's hand using long fine metal tweezers over a black ceramic fine dining plate at the lower right of the composition. A real burning open hearth with glowing amber flames in the middle-right background. Composition: widescreen 16:9, dark empty charcoal negative space across the left 45 percent for huge editorial website copy. Crop close so chef hand and plate are the subject; focus on hand and plate, fire slightly soft. Style: premium international food editorial photography, sophisticated natural film grain, deep blacks, restrained warmth, highly realistic textures and anatomy, natural not plastic, Leica photographic look. Lighting: warm firelight grazing hand, dramatic soft directional highlights, deep shadows. Constraints: photograph only, no text, no logo, no watermark, no illustration, no graphic layout, no collage.
+
+dish.jpg
+Use case: photorealistic-natural. Asset type: original editorial food photography for fictional fine dining restaurant EMBER. Primary request: a minimal black ceramic plate holding a carefully composed modern fine dining charred celeriac dish: pale cream sculptural celeriac sphere and cut section with rich caramelized brown edges, thin dark truffle shavings and vivid restrained green herb oil. Scene: nearly black charcoal table, nothing else, no cutlery or props. Composition: landscape 16:9, close 45-degree overhead view, plate centered in composition with generous surrounding dark negative space, elegant small portion with tactile detail. Style: premium food magazine photograph, realistic natural surface textures, sophisticated fine grain, shallow depth of field, deeply appetizing. Lighting: dramatic soft side light, gentle warm highlights with luxurious black shadows. Constraints: original photograph style only, no text, no logos, no watermark, no illustration, no collage.
+
+room.jpg
+Use case: photorealistic-natural. Asset type: cinematic interior photography for original fictional fine dining restaurant EMBER. Primary request: an intimate expensive modern restaurant interior made of warm walnut and dark volcanic stone, sculptural curved dark leather banquette, three or four beautifully arranged candlelit tables, dramatic brutalist plaster walls. Scene: interior at twilight, very subtle distant window glow, quiet architectural elegance. Composition: widescreen 16:9 landscape view, layered architectural depth, balanced asymmetry, no people. Style: international luxury architecture editorial photography, real materials and believable scale, sophisticated fine natural grain, very cinematic yet understated. Lighting: small pools of golden candlelight and dim warm concealed lighting against charcoal shadows, restrained atmosphere. Colors: warm umber, cream plaster, black stone, amber glow. Constraints: original photorealistic image, no people, no lettering, no signage, no logo, no watermark, no illustration, no graphic layout.
+
+fish.jpg
+Use case: photorealistic-natural. Asset type: original editorial menu food photograph for fictional fine dining restaurant EMBER. Primary request: a luxurious butter-poached white fish fillet, pearly opaque flesh with a delicate sheen, served with two precisely charred leek segments and silky mussel beurre blanc. A few small natural mussels, very restrained fine herbs. On a wide warm ivory handmade ceramic plate. Scene: very dark charcoal tabletop, no other props. Composition: cinematic 16:9 landscape, three-quarter overhead close view, asymmetrical refined modern plating, plate centered with dark negative space at edges. Style: premium food magazine photography, tactile genuine surfaces, believable real food, fine subtle film grain, not plastic or oversaturated. Lighting: warm amber side light creating gentle buttery highlights and deep shadows, coherent with a dark open-fire restaurant. Constraints: photograph only, no text, no logo, no watermark, no collage.
+
+pear.jpg
+Use case: photorealistic-natural. Asset type: original editorial dessert menu photograph for fictional fine dining restaurant EMBER. Primary request: an exquisite whole amber poached pear standing upright with a natural stem, a quenelle of cultured cream, toasted buckwheat, and a single extremely thin translucent caramel shard. Luxurious modern restrained fine-dining plating on a wide black handmade ceramic plate. Scene: nearly black charcoal tabletop, no extra props. Composition: cinematic 16:9 landscape, three-quarter overhead close view, sculptural composition on center of plate, generous dark breathing space. Style: premium international food magazine photography, beautiful real food texture, restrained film grain, believable surface shine, no plastic appearance. Lighting: warm amber side light glowing through caramel and tracing pear contours, elegant rich shadows, consistent with a charcoal and fire restaurant. Constraints: original photograph style only, no text, no logos, no watermark, no illustration, no collage.
+

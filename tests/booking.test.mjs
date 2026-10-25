@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { restaurantClock, nextServiceDate, maxBookingDate, validateBookingDate } from '../src/data/booking.ts';
+const now = new Date('2026-10-25T16:00:00Z');
+test('uses Rīga calendar date across a UTC day boundary',()=>{assert.equal(restaurantClock(new Date('2026-10-25T23:00:00Z')).date,'2026-10-26');});
+test('skips closed Monday and Tuesday for the default date',()=>{assert.equal(nextServiceDate(now),'2026-10-28');});
+test('rejects a closed day',()=>{assert.match(validateBookingDate('2026-10-26','19:00',now),/Mondays and Tuesdays/);});
+test('accepts an open service evening',()=>{assert.equal(validateBookingDate('2026-10-29','19:30',now),null);});
+test('rejects past dates and times in the restaurant timezone',()=>{assert.match(validateBookingDate('2026-10-24','19:00',now),/next three months/);assert.match(validateBookingDate('2026-10-25','18:00',now),/has passed/);assert.equal(validateBookingDate('2026-10-25','19:00',now),null);});
+test('rejects invalid calendar dates and unsupported time slots',()=>{assert.match(validateBookingDate('2026-11-31','19:00',now),/next three months/);assert.match(validateBookingDate('2026-10-29','22:00',now),/evening times/);});
+test('caps the three-month window at the end of the target month',()=>{assert.equal(maxBookingDate(new Date('2026-01-31T12:00:00Z')),'2026-04-30');assert.match(validateBookingDate('2027-02-04','19:00',now),/next three months/);});
